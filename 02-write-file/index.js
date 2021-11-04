@@ -14,7 +14,7 @@ rl.question('Hi! What\'s your name?\n', (answer) => {
 });
 
 rl.on('line', (answer) => {
-  if (answer == 'exit') completionProcess();
+  if (answer.toLowerCase() == 'exit') completionProcess();
 
   writeStream.write(answer + '\n');
   console.log('Your answer was written.');
