@@ -15,11 +15,9 @@ function getFilesFromDirectory(dir) {
         if (stats.isFile()) {
           const name = path.parse(file).name;
           const extname = path.extname(file).slice(1);
-          const size = (stats.size / 1024).toFixed(3) + 'kb';
+          const size = (stats.size / 1024) + 'kb';
 
           console.log(`${name} - ${extname} - ${size}`);
-        } else {
-          getFilesFromDirectory(route);
         }
       });
     });
