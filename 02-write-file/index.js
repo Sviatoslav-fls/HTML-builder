@@ -9,6 +9,7 @@ const rl = readline.createInterface({
 });
 
 rl.question('Hi! What\'s your name?\n', (answer) => {
+  if (answer.toLowerCase() == 'exit') completionProcess();
   console.log(`Nice to meet you, ${answer}!\nEnter your favorite artists or enter 'exit' for quit.`);
   rl.prompt();
 });
